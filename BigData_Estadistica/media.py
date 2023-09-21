@@ -23,37 +23,24 @@ def calc_media(values: list) -> float:
     return media
 
 
-flg_0 = True
-flg_1 = False
-flg_2 = False
-
-while flg_0:
+while True:
     print(options)
     option = str(input("\nOpcion: "))
 
     if not check_option(option):
         print("Opcion no valida.")
-        input("Enter para continuar\n\n\n")
+        input("\n\n\nEnter para continuar")
         continue
 
     option = int(option)
 
     if option == 0:
-        flg_0 = False
+        break;
     elif option == 1:
         value = calc_media(alturas)
         print("El valor de la media de las alturas es", value)
-        input("Enter to continue\n\n\n")
+        input("\n\n\nEnter to continue")
     else:
         value = calc_media(pesos)
         print("El valor de la media de los pesos es", value)
-        input("Enter to continue\n\n\n")
-
-
-
-
-
-
-
-
-
+        input("\n\n\nEnter to continue")
